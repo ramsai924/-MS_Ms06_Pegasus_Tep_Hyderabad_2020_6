@@ -4,7 +4,7 @@
 
 2. Abhishek Dube
 
-3.Subhakanta Pati
+3. Subhakanta Pati
 
 
 ## Learning Competencies
