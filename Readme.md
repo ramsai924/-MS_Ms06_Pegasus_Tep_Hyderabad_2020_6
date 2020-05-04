@@ -1,8 +1,15 @@
 # Milestone-6: Hackers read news too you know
 
+1. Ram Sai
+
+2. Abhishek Dube
+
+3.Subhakanta Pati
+
+
 ## Learning Competencies
 
-At the end of this milestone you will learn
+At the end of this milestone, you will learn
 
 - Reading and understanding code
 - Backend vs Frontend
