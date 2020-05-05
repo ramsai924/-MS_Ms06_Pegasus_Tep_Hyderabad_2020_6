@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: grey;
+        }
+        #editModel{
+            /* display: none; */
+            width: 30%;
+            padding: 20px;
+            border-radius: 5px;
+            position: absolute;
+            left: 50%;
+            top: 48%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            animation: fades 1s;
+            padding: 10px;
+            /* transition: 2s; */
+        }
+        .postImage{
+            margin-left: 110px;
+        }
+        #submit{
+            transform: translateX(-9px);
+        }
+        label{
+            color: rgb(224, 72, 26);
+        }
+    </style>
+</head>
+<body>
+    <div>
+        
+    </div>
+
+  <div id="editModel">
+    
+    <div>
+        <img src="/public/update.gif" class="postImage" alt="" width="200px" height="200px">
+    </div>
+
+        <form action="/post/edit/<%= iteams._id %>" method="POST">
+            <div>
+                <label>Username : </label>
+                <input type="text" class="form-control" name="username" id="username" value="<%= iteams.username %>">
+            </div>
+            <div>
+                <label>Tittle : </label>
+                <input type="text" class="form-control" name="title" id="title" value="<%= iteams.title %>">
+            </div>
+            <div>
+                <label>Comment : </label>
+                <textarea class="form-control" rows="6" id="comment" name="comment"><%= iteams.comment %></textarea>
+                <!-- <input type="text" class="form-control" name="comment" id="comment" value=""> -->
+            </div>
+           
+            <div style="margin:10px">
+                <input type="submit" class="btn btn-secondary" value="update" id="submit">
+                <a class="btn btn-secondary" href="/" id="submit" >Back</a>
+            </div>
+        </form>
+  </div>
+</body>
+</html>

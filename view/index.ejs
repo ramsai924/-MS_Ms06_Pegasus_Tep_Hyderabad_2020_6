@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    
+    <link rel="stylesheet" href="public/style.css">
+    <title>Milestone-6</title>
+</head>
+<body>
+
+    <div>
+        <h1 style="text-align: center;">Homepage</h1>
+    </div>
+    
+    <div class="container">
+
+        <div>
+            <button class="btn btn-dark" data-toggle="modal" data-target="#myModal">New Post</button>
+        </div>
+        
+
+        <div class="modal fade" id="myModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+        
+                    <!-- Modal Header -->
+                    
+                    <div class="modal-header">
+                        <h4 style="text-align: center;">Write a Post</h4>
+                        <button type="button" class="close" data-dismiss="modal">×</button>
+                    </div>
+
+                    <div>
+                        <img src="/public/post.gif" class="postImage" alt="">
+                    </div>
+        
+                    <div class="form-group">
+                        <form action="/" method="POST">
+                            <div>
+                                <label>Username : </label>
+                                <input type="text" class="form-control" name="username" id="username" required>
+                            </div>
+                            <div>
+                                <label>Title : </label>
+                                <input type="text" class="form-control" name="title" id="title" required>
+                            </div>
+                            <div>
+                                <label>Comment : </label>
+                                <textarea class="form-control" rows="3" id="comment" name="comment" required></textarea>
+                            </div>
+                            <div>
+                                <input class="btn btn-info" type="submit" value="submit" id="submit">
+                            </div>
+                            
+                        </form>
+                    </div>
+        
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    
+    <div class="container" style="padding: 15px;" id="displayContent">
+        <% iteams.forEach(function(ele){ %>
+        <div id="posts" class="jumbotro">
+            <h4><%= ele.title %></h4>
+            <p>Posted by <%= ele.username %></p>
+                <p>
+                    <%= ele.comment %>
+                </p>
+            <a href="/post/edit/<%= ele._id %>"><i class='fas fa-edit'> </i></a>
+            <a href='/<%= ele._id %>'><i class='fas fa-trash'> </i></a>
+            </div>
+            <% }) %>
+        </div>
+       
+       
+    </div>
+
+<script src="/public/html.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>
